@@ -54,6 +54,35 @@
   margin: 16px 0 24px;
   border: 3px solid #f2edf8;
 }
+    
+/* Photograph and introduction layout */
+.about-layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 36px;
+  align-items: start;
+}
+
+.about-layout .profile-photo {
+  margin: 0;
+}
+
+.about-text p:first-child {
+  margin-top: 0;
+}
+
+/* Stack photograph and text on smaller screens */
+@media (max-width: 700px) {
+  .about-layout {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .about-layout .profile-photo {
+    max-width: 280px;
+  }
+}
+
 
     }
 
@@ -225,12 +254,14 @@
 
     <section>
       <h2>Meet Your Technology Specialist</h2>
+      <div class="about-layout">
       
 <img
   src="sbtnov2026.png"
   alt="Triangle Tech Savvy Seniors technology specialist"
   class="profile-photo"
 >
+        <div class="about-text">
 
 
       <p>
@@ -254,6 +285,8 @@
         experience managing technology projects
         for major organizations.
       </p>
+          </div>
+</div>
     </section>
 
     <section class="contact">
